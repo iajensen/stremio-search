@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Open in Stremio</title>
+  </head>
+  <body>
+    <script>
+      const q = new URLSearchParams(location.search).get("q") || "";
+      // q should already be URL-encoded by Google Sheets via ENCODEURL()
+      window.location.href = "stremio://search?search=" + q;
+    </script>
+    <p>If nothing happens, your browser/OS may be blocking custom protocol links.</p>
+  </body>
+</html>
